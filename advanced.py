@@ -173,3 +173,6 @@ def main_cli() -> None:
         save_to_json()
     elif args.command == "list":
         display_tasks()
+
+if __name__ == "__main__":
+    main_cli()
