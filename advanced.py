@@ -68,3 +68,6 @@ from dataclasses import dataclass
 class Task:
     title: str
     done: bool = False
+
+def add_task_object(task: Task) -> None:
+    tasks.append(task)
