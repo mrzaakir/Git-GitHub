@@ -20,3 +20,5 @@ export const demoUsers: User[] = [
   { id: 2, name: 'Bilal', score: 78, active: true },
   { id: 3, name: 'Sara', score: 88, active: true }
 ];
+export const getTopUser = (users: User[]) => [...users].sort((a, b) => b.score - a.score)[0];
+export const topThreeUsers = (users: User[]) => [...users].sort((a, b) => b.score - a.score).slice(0, 3);
