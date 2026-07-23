@@ -52,3 +52,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("command", nargs="?", default="list")
     parser.add_argument("title", nargs="?", default="")
     return parser
+
+def run_from_cli() -> None:
+    parser = build_parser()
+    args = parser.parse_args()
+    if args.command == "add" and args.title:
+        add_task(args.title)
+    elif args.command == "list":
+        list_tasks()
