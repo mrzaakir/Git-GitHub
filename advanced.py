@@ -43,3 +43,12 @@ def main() -> None:
             add_task(title)
         elif choice == "list":
             list_tasks()
+
+import argparse
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Simple task planner")
+    parser.add_argument("command", nargs="?", default="list")
+    parser.add_argument("title", nargs="?", default="")
+    return parser
