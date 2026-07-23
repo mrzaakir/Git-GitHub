@@ -127,4 +127,16 @@ public class Java100 {
     System.out.println("Extra line 18");
     System.out.println("Extra line 19");
     System.out.println("Extra line 20");
+    System.out.println("Extra line 21");
+    System.out.println("Extra line 22");
+    System.out.println("Extra line 23");
+    System.out.println("Extra line 24");
+    System.out.println("Extra line 25");
+    System.out.println("Extra line 26");
+    System.out.println("Extra line 27");
+    System.out.println("Extra line 28");
+    System.out.println("Extra line 29");
+    System.out.println("Extra line 30");
+    System.out.println("Extra line 31");
+    System.out.println("Extra line 32");
 }
