@@ -3,3 +3,4 @@ export type User = {
   score: number;
 };
 export const greet = (name: string) => `Hello ${name}!`;
+export const formatUser = (user: User) => `${user.name}: ${user.score}`;
