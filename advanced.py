@@ -60,3 +60,11 @@ def run_from_cli() -> None:
         add_task(args.title)
     elif args.command == "list":
         list_tasks()
+
+from dataclasses import dataclass
+
+
+@dataclass
+class Task:
+    title: str
+    done: bool = False
