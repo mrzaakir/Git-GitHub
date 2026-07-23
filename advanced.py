@@ -26,3 +26,5 @@ def load_tasks(path: str = "tasks.txt") -> None:
             return [line.strip() for line in handle if line.strip()]
     except FileNotFoundError:
         return []
+
+tasks = load_tasks()
