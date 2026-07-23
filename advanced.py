@@ -142,3 +142,9 @@ def append_task_to_file(path: str, task: Task) -> None:
 def yield_titles(tasks: Iterable[Task]):
     for task in tasks:
         yield task.title
+
+from pathlib import Path
+
+
+def data_path(name: str = "tasks.json") -> Path:
+    return Path(__file__).with_name(name)
