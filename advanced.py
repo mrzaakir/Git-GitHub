@@ -87,3 +87,6 @@ def remove_task(index: int) -> None:
 
 def active_tasks() -> list[Task]:
     return [task for task in tasks if not task.done]
+
+class TaskError(Exception):
+    """Raised when a task operation is invalid."""
