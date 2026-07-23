@@ -101,3 +101,8 @@ from typing import Iterable
 
 def summarize(tasks: Iterable[Task]) -> str:
     return " | ".join(task.title for task in tasks)
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("task_planner")
