@@ -12,3 +12,4 @@ export const totalScore = (users: User[]) => users.reduce((sum, user) => sum + u
 export const rankUser = (user: User) => user.score >= 90 ? "A" : user.score >= 70 ? "B" : "C";
 export const showResult = (label: string, value: string) => `${label}: ${value}`;
 export const demoUsers: User[] = [ { name: "Amina", score: 92 }, { name: "Bilal", score: 78 }, { name: "Sara", score: 88 } ];
+export const getTopUser = (users: User[]) => users.sort((a, b) => b.score - a.score)[0];
