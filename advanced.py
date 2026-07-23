@@ -76,3 +76,7 @@ def list_task_objects() -> None:
     for index, task in enumerate(tasks, start=1):
         marker = "x" if task.done else " "
         print(f"{index}. [{marker}] {task.title}")
+
+def complete_task(index: int) -> None:
+    if 0 <= index < len(tasks):
+        tasks[index].done = True
