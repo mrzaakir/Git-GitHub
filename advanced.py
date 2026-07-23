@@ -163,3 +163,13 @@ def load_from_json(path: str | None = None) -> None:
         payload = json.loads(destination.read_text(encoding="utf-8"))
         global tasks
         tasks = [Task(title=item["title"], done=item.get("done", False)) for item in payload]
+
+def main_cli() -> None:
+    parser = build_parser()
+    args = parser.parse_args()
+    if args.command == "add" and args.title:
+        task = Task(title=ensure_title(args.title))
+        add_task_object(task)
+        save_to_json()
+    elif args.command == "list":
+        display_tasks()
