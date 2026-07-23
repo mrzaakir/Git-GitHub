@@ -106,3 +106,6 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("task_planner")
+
+def log_action(action: str, task: Task) -> None:
+    logger.info("%s -> %s", action, task.title)
