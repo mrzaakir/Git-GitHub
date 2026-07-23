@@ -22,3 +22,12 @@ export const demoUsers: User[] = [
 ];
 export const getTopUser = (users: User[]) => [...users].sort((a, b) => b.score - a.score)[0];
 export const topThreeUsers = (users: User[]) => [...users].sort((a, b) => b.score - a.score).slice(0, 3);
+export const printSummary = (users: User[]) => console.log(summary(users));
+export const runDemo = () => {
+  const top = getTopUser(demoUsers);
+  console.log(greet(top.name));
+  console.log(showResult('Top score', String(top.score)));
+  console.log(showResult('Average', String(averageScore(demoUsers.map((user) => user.score)))));
+};
+
+runDemo();
