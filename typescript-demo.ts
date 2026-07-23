@@ -11,3 +11,4 @@ export const summary = (users: User[]) => users.map((user) => `${user.name} => $
 export const totalScore = (users: User[]) => users.reduce((sum, user) => sum + user.score, 0);
 export const rankUser = (user: User) => user.score >= 90 ? "A" : user.score >= 70 ? "B" : "C";
 export const showResult = (label: string, value: string) => `${label}: ${value}`;
+export const demoUsers: User[] = [ { name: "Amina", score: 92 }, { name: "Bilal", score: 78 }, { name: "Sara", score: 88 } ];
