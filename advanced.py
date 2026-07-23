@@ -148,3 +148,11 @@ from pathlib import Path
 
 def data_path(name: str = "tasks.json") -> Path:
     return Path(__file__).with_name(name)
+
+import json
+
+
+def save_to_json(path: str | None = None) -> None:
+    destination = Path(path or data_path())
+    payload = [{"title": task.title, "done": task.done} for task in tasks]
+    destination.write_text(json.dumps(payload, indent=2), encoding="utf-8")
