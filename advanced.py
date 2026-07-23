@@ -134,3 +134,7 @@ def task_file(path: str):
         yield handle
     finally:
         handle.close()
+
+def append_task_to_file(path: str, task: Task) -> None:
+    with task_file(path) as handle:
+        handle.write(task.title + "\n")
