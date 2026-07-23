@@ -11,3 +11,7 @@ tasks = []
 
 def add_task(title: str) -> None:
     tasks.append(title)
+
+def list_tasks() -> None:
+    for index, task in enumerate(tasks, start=1):
+        print(f"{index}. {task}")
