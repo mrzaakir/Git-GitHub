@@ -28,3 +28,6 @@ def load_tasks(path: str = "tasks.txt") -> None:
         return []
 
 tasks = load_tasks()
+
+def read_input(prompt: str) -> str:
+    return input(prompt).strip()
