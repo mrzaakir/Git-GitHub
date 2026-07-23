@@ -5,3 +5,9 @@ def greet(name: str) -> str:
 
 
 print(greet("world"))
+
+tasks = []
+
+
+def add_task(title: str) -> None:
+    tasks.append(title)
