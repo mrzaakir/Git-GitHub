@@ -33,3 +33,8 @@ export const runDemo = () => {
 };
 
 runDemo();
+
+// Additional demo operations
+const testUser: User = { id: 4, name: 'Alex', score: 85, active: true };
+console.log(showResult('Test User', formatUser(testUser)));
+console.log(showResult('Valid', String(isValidUser(testUser))));
