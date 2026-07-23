@@ -119,3 +119,7 @@ def log_calls(func):
         logger.info("Calling %s", func.__name__)
         return func(*args, **kwargs)
     return wrapper
+
+@log_calls
+def display_tasks() -> None:
+    list_task_objects()
