@@ -156,3 +156,10 @@ def save_to_json(path: str | None = None) -> None:
     destination = Path(path or data_path())
     payload = [{"title": task.title, "done": task.done} for task in tasks]
     destination.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+def load_from_json(path: str | None = None) -> None:
+    destination = Path(path or data_path())
+    if destination.exists():
+        payload = json.loads(destination.read_text(encoding="utf-8"))
+        global tasks
+        tasks = [Task(title=item["title"], done=item.get("done", False)) for item in payload]
