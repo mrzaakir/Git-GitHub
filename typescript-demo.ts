@@ -14,3 +14,9 @@ export const averageScore = (scores: number[]) => scores.length === 0 ? 0 : scor
 export const summary = (users: User[]) => users.map((user) => `${user.name} => ${user.score}`).join("\n");
 export const totalScore = (users: User[]) => users.reduce((sum, user) => sum + user.score, 0);
 export const scoreGrade = (score: number) => score >= 90 ? "A" : score >= 70 ? "B" : "C";
+export const showResult = (label: string, value: string) => `${label}: ${value}`;
+export const demoUsers: User[] = [
+  { id: 1, name: 'Amina', score: 92, active: true },
+  { id: 2, name: 'Bilal', score: 78, active: true },
+  { id: 3, name: 'Sara', score: 88, active: true }
+];
