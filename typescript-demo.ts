@@ -11,3 +11,6 @@ export const formatUser = (user: User) => `${user.name}: ${user.score}`;
 export const isValidUser = (user: User) => user.active && user.name.trim().length > 0 && user.score >= 0;
 export const bonusPoints = (score: number) => score + 10;
 export const averageScore = (scores: number[]) => scores.length === 0 ? 0 : scores.reduce((sum, value) => sum + value, 0) / scores.length;
+export const summary = (users: User[]) => users.map((user) => `${user.name} => ${user.score}`).join("\n");
+export const totalScore = (users: User[]) => users.reduce((sum, user) => sum + user.score, 0);
+export const scoreGrade = (score: number) => score >= 90 ? "A" : score >= 70 ? "B" : "C";
