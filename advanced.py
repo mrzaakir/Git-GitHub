@@ -19,3 +19,10 @@ def list_tasks() -> None:
 def save_tasks(path: str = "tasks.txt") -> None:
     with open(path, "w", encoding="utf-8") as handle:
         handle.write("\n".join(tasks))
+
+def load_tasks(path: str = "tasks.txt") -> None:
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            return [line.strip() for line in handle if line.strip()]
+    except FileNotFoundError:
+        return []
