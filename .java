@@ -96,4 +96,15 @@ public class Java100 {
     public static void showInfo() {
         System.out.println("This is a generated Java class.");
     }
+
+    int x = 10;
+    int y = 3;
+    System.out.println("X + Y = " + (x + y));
+    System.out.println("X - Y = " + (x - y));
+    System.out.println("X * Y = " + (x * y));
+    System.out.println("X / Y = " + (x / y));
+    System.out.println("Repeat: " + repeatText("Hi", 3));
+    System.out.println("Max: " + max(8, 5));
+    System.out.println("Min: " + min(8, 5));
+    showInfo();
 }
