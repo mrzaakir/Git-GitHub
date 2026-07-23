@@ -31,3 +31,13 @@ body {
 .btn:focus {
   outline: 3px solid rgba(37, 99, 235, 0.35);
 }
+.navbar {
+  display: flex;
+  gap: 1rem;
+}
+.navbar a {
+  color: #1f2937;
+}
+.navbar a:hover {
+  color: #2563eb;
+}
