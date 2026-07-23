@@ -109,3 +109,13 @@ logger = logging.getLogger("task_planner")
 
 def log_action(action: str, task: Task) -> None:
     logger.info("%s -> %s", action, task.title)
+
+from functools import wraps
+
+
+def log_calls(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        logger.info("Calling %s", func.__name__)
+        return func(*args, **kwargs)
+    return wrapper
