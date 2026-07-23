@@ -31,3 +31,15 @@ tasks = load_tasks()
 
 def read_input(prompt: str) -> str:
     return input(prompt).strip()
+
+def main() -> None:
+    print("Task planner ready")
+    while True:
+        choice = read_input("Choose action (add/list/quit): ").lower()
+        if choice == "quit":
+            break
+        if choice == "add":
+            title = read_input("Task title: ")
+            add_task(title)
+        elif choice == "list":
+            list_tasks()
