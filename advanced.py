@@ -83,6 +83,8 @@ def complete_task(index: int) -> None:
 
 def remove_task(index: int) -> None:
     if 0 <= index < len(tasks):
+        task = tasks[index]
+        log_action("removed", task)
         tasks.pop(index)
 
 def active_tasks() -> list[Task]:
