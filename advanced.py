@@ -90,3 +90,8 @@ def active_tasks() -> list[Task]:
 
 class TaskError(Exception):
     """Raised when a task operation is invalid."""
+
+def ensure_title(title: str) -> str:
+    if not title.strip():
+        raise TaskError("Task title cannot be empty")
+    return title.strip()
