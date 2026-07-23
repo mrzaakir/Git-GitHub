@@ -138,3 +138,7 @@ def task_file(path: str):
 def append_task_to_file(path: str, task: Task) -> None:
     with task_file(path) as handle:
         handle.write(task.title + "\n")
+
+def yield_titles(tasks: Iterable[Task]):
+    for task in tasks:
+        yield task.title
