@@ -107,4 +107,14 @@ public class Java100 {
     System.out.println("Max: " + max(8, 5));
     System.out.println("Min: " + min(8, 5));
     showInfo();
+    System.out.println("Extra line 1");
+    System.out.println("Extra line 2");
+    System.out.println("Extra line 3");
+    System.out.println("Extra line 4");
+    System.out.println("Extra line 5");
+    System.out.println("Extra line 6");
+    System.out.println("Extra line 7");
+    System.out.println("Extra line 8");
+    System.out.println("Extra line 9");
+    System.out.println("Extra line 10");
 }
