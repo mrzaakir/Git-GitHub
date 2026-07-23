@@ -123,3 +123,14 @@ def log_calls(func):
 @log_calls
 def display_tasks() -> None:
     list_task_objects()
+
+from contextlib import contextmanager
+
+
+@contextmanager
+def task_file(path: str):
+    handle = open(path, "a", encoding="utf-8")
+    try:
+        yield handle
+    finally:
+        handle.close()
