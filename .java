@@ -185,4 +185,9 @@ public class Java100 {
     System.out.println("Extra line 76");
     System.out.println("Extra line 77");
     System.out.println("Extra line 78");
+    System.out.println("Added line 79");
+    System.out.println("Added line 80");
+    System.out.println("Added line 81");
+    System.out.println("Added line 82");
+    System.out.println("Added line 83");
 }
