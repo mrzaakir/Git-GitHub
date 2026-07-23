@@ -80,3 +80,7 @@ def list_task_objects() -> None:
 def complete_task(index: int) -> None:
     if 0 <= index < len(tasks):
         tasks[index].done = True
+
+def remove_task(index: int) -> None:
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
