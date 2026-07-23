@@ -71,3 +71,8 @@ class Task:
 
 def add_task_object(task: Task) -> None:
     tasks.append(task)
+
+def list_task_objects() -> None:
+    for index, task in enumerate(tasks, start=1):
+        marker = "x" if task.done else " "
+        print(f"{index}. [{marker}] {task.title}")
