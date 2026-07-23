@@ -15,3 +15,4 @@ export const demoUsers: User[] = [ { name: "Amina", score: 92 }, { name: "Bilal"
 export const getTopUser = (users: User[]) => users.sort((a, b) => b.score - a.score)[0];
 export const printSummary = (users: User[]) => console.log(summary(users));
 export const runDemo = () => { const top = getTopUser(demoUsers); console.log(greet(top.name)); console.log(showResult("Top score", String(top.score))); };
+runDemo();
