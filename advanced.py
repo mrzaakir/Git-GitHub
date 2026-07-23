@@ -95,3 +95,9 @@ def ensure_title(title: str) -> str:
     if not title.strip():
         raise TaskError("Task title cannot be empty")
     return title.strip()
+
+from typing import Iterable
+
+
+def summarize(tasks: Iterable[Task]) -> str:
+    return " | ".join(task.title for task in tasks)
